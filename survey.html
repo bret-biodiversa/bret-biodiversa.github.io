@@ -98,7 +98,8 @@ By submitting this form, you confirm that:
 </ul>
 
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLScK7MuDmO0z-T-Zsw82Cb6YCsX_HuYYlSezNj1ZRLWb1wnUJA/formResponse"
+<form id="surveyForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLScK7MuDmO0z-T-Zsw82Cb6YCsX_HuYYlSezNj1ZRLWb1wnUJA/formResponse"
       method="POST"
       target="hidden_iframe">
 
@@ -159,11 +160,15 @@ to 10 (strong renewable energy expansion priority):
 </div>
 
 <script>
-document.getElementById("surveyForm").addEventListener("submit", function() {
-    setTimeout(function() {
-        document.getElementById("thankyouMessage").style.display = "block";
-        document.getElementById("surveyForm").reset();
-    }, 800);
+window.addEventListener("DOMContentLoaded", function() {
+    var form = document.getElementById("surveyForm");
+
+    form.addEventListener("submit", function() {
+        setTimeout(function() {
+            document.getElementById("thankyouMessage").style.display = "block";
+            form.reset();
+        }, 800);
+    });
 });
 </script>
 
@@ -175,6 +180,7 @@ document.getElementById("surveyForm").addEventListener("submit", function() {
 
 </body>
 </html>
+
 
 
 
