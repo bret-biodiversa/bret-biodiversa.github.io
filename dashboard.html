@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BRET Survey Dashboard</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h2>Survey Results Dashboard</h2>
+<canvas id="energyChart"></canvas>
+
+<script>
+fetch("PASTE_YOUR_PUBLISHED_CSV_LINK_HERE")
+.then(response => response.text())
+.then(data => {
+    const rows = data.split("\n").slice(1);
+    const counts = {Solar:0, Wind:0, Hydropower:0, Bioenergy:0, All:0};
+
+    rows.forEach(row => {
+        const cols = row.split(",");
+        const energy = cols[1]; 
+        if(counts[energy] !== undefined) counts[energy]++;
+    });
+
+    new Chart(document.getElementById("energyChart"), {
+        type: "bar",
+        data: {
+            labels: Object.keys(counts),
+            datasets: [{
+                label: "Energy Concern Distribution",
+                data: Object.values(counts)
+            }]
+        }
+    });
+});
+</script>
+
+</body>
+</html>
