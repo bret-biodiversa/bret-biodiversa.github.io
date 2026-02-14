@@ -97,13 +97,9 @@ By submitting this form, you confirm that:
   <li>You consent to the anonymous use of your responses for research purposes</li>
 </ul>
 
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScK7MuDmO0z-T-Zsw82Cb6YCsX_HuYYlSezNj1ZRLWb1wnUJA/formResponse" method="POST" target="_blank">
 
-<form id="surveyForm"
-      action="https://docs.google.com/forms/d/e/1FAIpQLScK7MuDmO0z-T-Zsw82Cb6YCsX_HuYYlSezNj1ZRLWb1wnUJA/formResponse"
-      method="POST"
-      target="hidden_iframe">
-
-<label>
+  <label>
   <input type="checkbox" required>
   I have read the information above and consent to participate.
 </label>
@@ -159,19 +155,6 @@ to 10 (strong renewable energy expansion priority):
   <p>Your response has been recorded.</p>
 </div>
 
-<script>
-window.addEventListener("DOMContentLoaded", function() {
-    var form = document.getElementById("surveyForm");
-
-    form.addEventListener("submit", function() {
-        setTimeout(function() {
-            document.getElementById("thankyouMessage").style.display = "block";
-            form.reset();
-        }, 800);
-    });
-});
-</script>
-
 </main>
 
 <footer>
@@ -180,6 +163,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
 
 
 
