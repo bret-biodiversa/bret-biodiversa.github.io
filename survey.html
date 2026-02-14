@@ -159,11 +159,13 @@ to 10 (strong renewable energy expansion priority):
 </div>
 
 <script>
-function showConfirmation() {
-  document.getElementById("thankyouMessage").style.display = "block";
-}
+document.getElementById("surveyForm").addEventListener("submit", function() {
+    setTimeout(function() {
+        document.getElementById("thankyouMessage").style.display = "block";
+        document.getElementById("surveyForm").reset();
+    }, 800);
+});
 </script>
-
 
 </main>
 
@@ -173,6 +175,7 @@ function showConfirmation() {
 
 </body>
 </html>
+
 
 
 
