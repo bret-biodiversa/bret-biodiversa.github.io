@@ -68,7 +68,42 @@
   </p>
 
   <!-- IMPORTANT: Replace action URL and entry IDs -->
-<form action="https://docs.google.com/forms/d/e/1FAIpQLScK7MuDmO0z-T-Zsw82Cb6YCsX_HuYYlSezNj1ZRLWb1wnUJA/formResponse" method="POST" target="_blank">
+<h3>Research Information & Consent</h3>
+
+<p>
+This survey is conducted as part of the BRET project 
+(Biodiversity-positive Renewable Energy Transition, 2026–2029).
+The purpose is to understand stakeholder perspectives on
+renewable energy expansion and biodiversity conservation.
+</p>
+
+<p>
+Participation is voluntary. Responses are anonymous.
+No personal identifying information is collected.
+Data will be used for academic research, policy analysis,
+and project reporting within the BRET consortium.
+</p>
+
+<p>
+By submitting this form, you confirm that:
+</p>
+
+<ul>
+  <li>You are participating voluntarily</li>
+  <li>You are at least 18 years old</li>
+  <li>You consent to the anonymous use of your responses for research purposes</li>
+</ul>
+
+<label>
+  <input type="checkbox" required>
+  I have read the information above and consent to participate.
+</label>
+  
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScK7MuDmO0z-T-Zsw82Cb6YCsX_HuYYlSezNj1ZRLWb1wnUJA/formResponse"
+      method="POST"
+      target="hidden_iframe"
+      onsubmit="showConfirmation();">
+
 
 <label>Stakeholder Role</label>
 <select name="entry.454812240" required>
@@ -114,6 +149,18 @@ to 10 (strong renewable energy expansion priority):
 <button type="submit">Submit Response</button>
 
 </form>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<div id="thankyouMessage" style="display:none; margin-top:20px;">
+  <h3>Thank you for your contribution.</h3>
+  <p>Your response has been recorded.</p>
+</div>
+
+<script>
+function showConfirmation() {
+  document.getElementById("thankyouMessage").style.display = "block";
+}
+</script>
 
 
 </main>
@@ -124,3 +171,4 @@ to 10 (strong renewable energy expansion priority):
 
 </body>
 </html>
+
