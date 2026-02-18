@@ -5,8 +5,33 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+<header class="site-header">
 
-<h2>Survey Results Dashboard</h2>
+  <div class="header-row">
+    <!-- Project Logo -->
+    <img src="images/BRET_Logo.png" alt="BRET Logo" class="logo">
+
+    <!-- Funder Logos -->
+    <div class="header-right">
+    <img src="images/EC.jpg" alt="European Commission Logo" class="funder-logo">
+    <img src="images/Biodiversa+Logo_FINAL_RGB.png" alt="Biodiversa+ Logo" class="funder-logo">
+    </div>
+  </div>
+
+  <h1 class="page-title">Survey Results Dashboard</h1>
+</header>
+
+<nav class="site-nav">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="workpackages.html">Work Packages</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="partners.html">Partners</a>
+  <a href="contact.html">Contact</a>
+  <a href="survey.html">Survey</a>
+  <a href="dashboard.html">Dashboard</a>
+</nav>
+
 <canvas id="energyChart"></canvas>
 
 <script>
@@ -37,3 +62,4 @@ fetch("PASTE_YOUR_PUBLISHED_CSV_LINK_HERE")
 
 </body>
 </html>
+
