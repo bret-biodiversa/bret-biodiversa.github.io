@@ -1,34 +1,30 @@
-/* HEADER LAYOUT */
 .site-header {
   display: flex;
-  justify-content: center;     /* center main content */
   align-items: center;
-  position: relative;          /* allow right alignment */
-  padding: 20px 40px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #eee;
+  justify-content: space-between; /* spread out left, center, right */
+  padding: 12px 40px;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
 }
 
-/* Center block */
+/* Center group */
 .header-center {
   text-align: center;
+  flex: 1; /* take up remaining space */
 }
 
 .logo {
   height: 80px;
+  margin: 0 auto;
   display: block;
-  margin: 0 auto 10px auto;
 }
 
-/* Right block */
+/* Right group */
 .header-right {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
-  align-items: center;
   gap: 20px;
+  justify-content: flex-end;
+  flex-shrink: 0;
 }
 
 .funder-logo {
