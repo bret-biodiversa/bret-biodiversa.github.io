@@ -19,7 +19,7 @@
 /* Right funder logos */
 .header-right {
   display: flex;
-  align-items: center;  /* force same vertical alignment */
+  align-items: right;  /* force same vertical alignment */
   gap: 20px;
 }
 
@@ -32,3 +32,4 @@
   text-align: center;
   margin-top: 10px;
 }
+
