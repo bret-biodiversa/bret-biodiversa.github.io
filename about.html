@@ -1,21 +1,20 @@
-ht<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>About – BRET Project</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="site-header">
 
+<header class="site-header">
   <div class="header-row">
-    <!-- Project Logo -->
     <img src="images/BRET_Logo.png" alt="BRET Logo" class="logo">
 
-    <!-- Funder Logos -->
     <div class="header-right">
-    <img src="images/EC.jpg" alt="European Commission Logo" class="funder-logo">
-    <img src="images/Biodiversa+Logo_FINAL_RGB.png" alt="Biodiversa+ Logo" class="funder-logo">
+      <img src="images/EC.jpg" alt="European Commission Logo" class="funder-logo">
+      <img src="images/Biodiversa+Logo_FINAL_RGB.png" alt="Biodiversa+ Logo" class="funder-logo">
     </div>
   </div>
 
@@ -24,7 +23,7 @@ ht<!DOCTYPE html>
 
 <nav class="site-nav">
   <a href="index.html">Home</a>
-  <a href="about.html">About</a>
+  <a href="about.html" class="active">About</a>
   <a href="workpackages.html">Work Packages</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="partners.html">Partners</a>
@@ -32,60 +31,45 @@ ht<!DOCTYPE html>
   <a href="dashboard.html">Dashboard</a>
 </nav>
 
-  <main>
-    <h2>Integrating Biodiversity Conservation into Renewable Energy Transition</h2>
-    <p>
-      BRET (2026–2029) develops evidence-based strategies for biodiversity-positive renewable energy
-      transition. It addresses conflicts between renewable energy expansion (wind, solar, hydro, bioenergy)
-      and biodiversity conservation by combining ecological science, policy analysis, and stakeholder engagement.
-    </p>
-    <p>
-      <strong>Objectives:</strong>
-      <ul>
-        <li>Integrate biodiversity baselines into renewable energy site planning</li>
-        <li>Create ecological impact assessment frameworks (using DPSIR)</li>
-        <li>Develop biodiversity valuation methods combining ecological, economic, and socio-cultural perspectives</li>
-        <li>Translate findings into actionable policies and guidelines for developers</li>
-      </ul>
-    </p>
-    <div></div>
-    <p class=MsoNormal><b>Acknowledgement<o:p></o:p></b></p>
+<main class="container">
 
-    <p class=MsoNormal>This research was funded by <span class=SpellE><b>Biodiversa</b></span>+,
-the European Biodiversity Partnership, in the context of the <b>BRET project </b>under
-the 2024-2025 <span class=SpellE><b>BiodivTransform</b></span><b> </b>joint
-call. It was co-<span class=GramE>funded</span> by the <b>European Commission
-(GA No. 101052342) </b>and the following funding organizations: <b>Formas
-Sweden, AEI Spain & FB Spain, NWO Netherlands, ANCD Moldova, and MVZI Slovenia.<o:p></o:p></b></p>
-<style>
-.logo-row {
-  display: flex;
-  align-items: center;
-  gap: 20px;          /* space between logos */
-  margin-bottom: 15px;
-}
-.logo-row img {
-  height: 60px;       /* unify height */
-  width: auto;        /* keep aspect ratio */
-}
-</style>
+  <h2>Integrating Biodiversity Conservation into Renewable Energy Transition</h2>
 
-<div class="logo-row">
-  <img src="images/Formas_Sweden.png" alt="Formas Sweden">
-  <img src="images/AEI_Spain.jpg" alt="AEI Spain">
-  <img src="images/FB_Spain.png" alt="FB Spain">
-</div>
-<div></div>
-<div class="logo-row">
-  <img width=120px src="images/NWO_Netherlands.jpg" alt="NWO Netherlands">
-  <img src="images/NARD_Moldova.jpg" alt="ANCD Moldova">
-  <img src="images/MZVI_Slovenia.png" alt="MVZI Slovenia">
-</div>
+  <p>
+    BRET (2026–2029) develops evidence-based strategies for biodiversity-positive renewable energy transition. It addresses conflicts between renewable energy expansion (wind, solar, hydro, bioenergy) and biodiversity conservation by combining ecological science, policy analysis, and stakeholder engagement.
+  </p>
 
-  </main>
+  <p><strong>Objectives:</strong></p>
+  <ul>
+    <li>Integrate biodiversity baselines into renewable energy site planning</li>
+    <li>Create ecological impact assessment frameworks (using DPSIR)</li>
+    <li>Develop biodiversity valuation methods combining ecological, economic, and socio-cultural perspectives</li>
+    <li>Translate findings into actionable policies and guidelines for developers</li>
+  </ul>
 
-  <footer>
-    <p>Funded by Biodiversa+ under 2024-25 BiodivTransform joint Call. Co-Funded by the EC (GA No. 101052342). Coordinated by MGEO, Lund University.</p>
-  </footer>
+  <h2>Acknowledgement</h2>
+
+  <p>
+    This research was funded by <strong>Biodiversa+</strong>, the European Biodiversity Partnership, in the context of the <strong>BRET project</strong> under the 2024–2025 <strong>BiodivTransform</strong> joint call. It was co-funded by the <strong>European Commission (GA No. 101052342)</strong> and the following funding organizations: <strong>Formas Sweden, AEI Spain, FB Spain, NWO Netherlands, ANCD Moldova, and MVZI Slovenia.</strong>
+  </p>
+
+  <div class="logo-row">
+    <img src="images/Formas_Sweden.png" alt="Formas Sweden">
+    <img src="images/AEI_Spain.jpg" alt="AEI Spain">
+    <img src="images/FB_Spain.png" alt="FB Spain">
+  </div>
+
+  <div class="logo-row">
+    <img src="images/NWO_Netherlands.jpg" alt="NWO Netherlands">
+    <img src="images/NARD_Moldova.jpg" alt="ANCD Moldova">
+    <img src="images/MZVI_Slovenia.png" alt="MVZI Slovenia">
+  </div>
+
+</main>
+
+<footer>
+  <p>Funded by Biodiversa+ under 2024-25 BiodivTransform joint Call. Co-Funded by the EC (GA No. 101052342). Coordinated by MGEO, Lund University.</p>
+</footer>
+
 </body>
 </html>
