@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>BRET Survey Dashboard</title>
-<link rel="stylesheet" href="style.css">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta charset="UTF-8">
+  <title>Survey Results Dashboard – BRET Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
-<header class="site-header">
 
+<body>
+
+<header class="site-header">
   <div class="header-row">
-    <!-- Project Logo -->
     <img src="images/BRET_Logo.png" alt="BRET Logo" class="logo">
 
-    <!-- Funder Logos -->
     <div class="header-right">
-    <img src="images/EC.jpg" alt="European Commission Logo" class="funder-logo">
-    <img src="images/Biodiversa+Logo_FINAL_RGB.png" alt="Biodiversa+ Logo" class="funder-logo">
+      <img src="images/EC.jpg" alt="European Commission Logo" class="funder-logo">
+      <img src="images/Biodiversa+Logo_FINAL_RGB.png" alt="Biodiversa+ Logo" class="funder-logo">
     </div>
   </div>
 
@@ -29,39 +29,41 @@
   <a href="case-studies.html">Case Studies</a>
   <a href="partners.html">Partners</a>
   <a href="survey.html">Survey</a>
-  <a href="dashboard.html">Dashboard</a>
+  <a href="dashboard.html" class="active">Dashboard</a>
 </nav>
 
-<canvas id="energyChart"></canvas>
+<main class="container">
 
-<script>
-fetch("PASTE_YOUR_PUBLISHED_CSV_LINK_HERE")
-.then(response => response.text())
-.then(data => {
-    const rows = data.split("\n").slice(1);
-    const counts = {Solar:0, Wind:0, Hydropower:0, Bioenergy:0, All:0};
+  <section>
+    <h2>Stakeholder Survey Statistics</h2>
 
-    rows.forEach(row => {
-        const cols = row.split(",");
-        const energy = cols[1]; 
-        if(counts[energy] !== undefined) counts[energy]++;
-    });
+    <p>
+      This dashboard presents live aggregated responses from the BRET stakeholder survey.
+      The data are updated automatically as new responses are submitted.
+      All responses are anonymous and presented in aggregated form only.
+    </p>
+  </section>
 
-    new Chart(document.getElementById("energyChart"), {
-        type: "bar",
-        data: {
-            labels: Object.keys(counts),
-            datasets: [{
-                label: "Energy Concern Distribution",
-                data: Object.values(counts)
-            }]
-        }
-    });
-});
-</script>
+  <section class="dashboard-card">
+
+    <iframe 
+      src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQB5OP7D0MVGNDEVXmQTXWpL0VHGLrDS7668r1BVal6eQtBYqSjZ5aavjCojf3id7Idxqwi9bmjB1EW/pubhtml?gid=1805281466&single=true&widget=true&headers=false"
+      width="100%"
+      height="900"
+      style="border:none;">
+    </iframe>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>
+    Funded by Biodiversa+ under 2024–25 BiodivTransform joint Call.
+    Co-Funded by the EC (GA No. 101052342).
+    Coordinated by MGEO, Lund University.
+  </p>
+</footer>
 
 </body>
 </html>
-
-
-
