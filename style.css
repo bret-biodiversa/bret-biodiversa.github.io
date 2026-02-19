@@ -211,6 +211,16 @@ footer p {
   opacity: 0.9;
 }
 
+/* ================ Case study map styling ================ */
+.case-map {
+  width: 100%;
+  max-width: 900px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
 /* ================= RESPONSIVE DESIGN ================= */
 
 @media (max-width: 900px) {
@@ -258,4 +268,5 @@ footer p {
   }
 
 }
+
 
