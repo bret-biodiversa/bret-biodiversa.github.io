@@ -258,6 +258,35 @@ footer p {
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+/* ================= SURVEY FORM ================= */
+
+.survey-form {
+  margin-top: 30px;
+}
+
+.survey-form label {
+  font-weight: 500;
+  display: block;
+  margin-top: 20px;
+}
+
+.survey-form textarea,
+.survey-form select,
+.survey-form input[type="range"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  font-family: inherit;
+}
+
+.survey-form textarea:focus,
+.survey-form select:focus {
+  outline: none;
+  border-color: #1f3a5f;
+}
+
 
 /* ================= RESPONSIVE DESIGN ================= */
 
@@ -306,6 +335,7 @@ footer p {
   }
 
 }
+
 
 
 
