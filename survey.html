@@ -4,50 +4,19 @@
   <meta charset="UTF-8">
   <title>BRET – Stakeholder Survey</title>
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    main {
-      max-width: 800px;
-      margin: auto;
-    }
-    form {
-      margin-top: 20px;
-    }
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 15px;
-    }
-    textarea, select, input[type=range] {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background-color: #2c7a4b;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #245f3b;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
 <header class="site-header">
 
   <div class="header-row">
-    <!-- Project Logo -->
     <img src="images/BRET_Logo.png" alt="BRET Logo" class="logo">
 
-    <!-- Funder Logos -->
     <div class="header-right">
-    <img src="images/EC.jpg" alt="European Commission Logo" class="funder-logo">
-    <img src="images/Biodiversa+Logo_FINAL_RGB.png" alt="Biodiversa+ Logo" class="funder-logo">
+      <img src="images/EC.jpg" alt="European Commission Logo" class="funder-logo">
+      <img src="images/Biodiversa+Logo_FINAL_RGB.png" alt="Biodiversa+ Logo" class="funder-logo">
     </div>
   </div>
 
@@ -60,104 +29,112 @@
   <a href="workpackages.html">Work Packages</a>
   <a href="case-studies.html">Case Studies</a>
   <a href="partners.html">Partners</a>
-  <a href="survey.html">Survey</a>
+  <a href="survey.html" class="active">Survey</a>
   <a href="dashboard.html">Dashboard</a>
 </nav>
-<main>
-  <h2>Stakeholder Survey: Biodiversity & Renewable Energy</h2>
 
-  <p>
-    The BRET project invites stakeholders to share their perspectives on the
-    conflicts and synergies between renewable energy expansion
-    (solar, wind, hydropower, bioenergy) and biodiversity protection.
-  </p>
+<main class="container">
 
-  <!-- IMPORTANT: Replace action URL and entry IDs -->
-<h3>Research Information & Consent</h3>
+  <section>
+    <h2>Stakeholder Survey: Biodiversity & Renewable Energy</h2>
 
-<p>
-This survey is conducted as part of the BRET project 
-(Biodiversity-positive Renewable Energy Transition, 2026–2029).
-The purpose is to understand stakeholder perspectives on
-renewable energy expansion and biodiversity conservation.
-</p>
+    <p>
+      The BRET project invites stakeholders to share perspectives on
+      the conflicts and synergies between renewable energy expansion
+      (solar, wind, hydropower, bioenergy) and biodiversity protection.
+    </p>
+  </section>
 
-<p>
-Participation is voluntary. Responses are anonymous.
-No personal identifying information is collected.
-Data will be used for academic research, policy analysis,
-and project reporting within the BRET consortium.
-</p>
+  <section>
+    <h3>Research Information & Consent</h3>
 
-<p>
-By submitting this form, you confirm that:
-</p>
+    <p>
+      This survey is conducted as part of the BRET project
+      (<strong>Biodiversity-positive Renewable Energy Transition, 2026–2029</strong>).
+      The purpose is to understand stakeholder perspectives on renewable energy expansion
+      and biodiversity conservation.
+    </p>
 
-<ul>
-  <li>You are participating voluntarily</li>
-  <li>You are at least 18 years old</li>
-  <li>You consent to the anonymous use of your responses for research purposes</li>
-</ul>
+    <p>
+      Participation is voluntary and responses are anonymous.
+      No personal identifying information is collected.
+      Data will be used for academic research, policy analysis,
+      and project reporting within the BRET consortium.
+    </p>
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLScK7MuDmO0z-T-Zsw82Cb6YCsX_HuYYlSezNj1ZRLWb1wnUJA/formResponse" method="POST" target="_blank">
+    <p>By submitting this form, you confirm that:</p>
 
-  <label>
-  <input type="checkbox" required>
-  I have read the information above and consent to participate.
-</label>
+    <ul>
+      <li>You are participating voluntarily</li>
+      <li>You are at least 18 years old</li>
+      <li>You consent to the anonymous use of your responses for research purposes</li>
+    </ul>
+  </section>
 
-<label>Stakeholder Role</label>
-<select name="entry.454812240" required>
-  <option value="">Select</option>
-  <option>Citizen</option>
-  <option>Scientist</option>
-  <option>Policy Maker</option>
-  <option>Farmer</option>
-  <option>Energy Developer</option>
-  <option>NGO Representative</option>
-  <option>Other</option>
-</select>
+  <section>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScK7MuDmO0z-T-Zsw82Cb6YCsX_HuYYlSezNj1ZRLWb1wnUJA/formResponse"
+          method="POST"
+          target="_blank"
+          class="survey-form">
 
-<label>Which renewable energy type raises the most biodiversity concern?</label>
-<select name="entry.1530645489" required>
-  <option value="">Select</option>
-  <option>Solar</option>
-  <option>Wind</option>
-  <option>Hydropower</option>
-  <option>Bioenergy</option>
-  <option>All</option>
-</select>
+      <label>
+        <input type="checkbox" required>
+        I have read the information above and consent to participate.
+      </label>
 
-<label>
-On a scale from 1 (strong biodiversity protection priority)
-to 10 (strong renewable energy expansion priority):
-</label>
+      <label>Stakeholder Role</label>
+      <select name="entry.454812240" required>
+        <option value="">Select</option>
+        <option>Citizen</option>
+        <option>Scientist</option>
+        <option>Policy Maker</option>
+        <option>Farmer</option>
+        <option>Energy Developer</option>
+        <option>NGO Representative</option>
+        <option>Other</option>
+      </select>
 
-<input type="range"
-       min="1"
-       max="10"
-       value="5"
-       name="entry.128975814"
-       oninput="document.getElementById('scaleValue').innerText=this.value">
+      <label>Which renewable energy type raises the most biodiversity concern?</label>
+      <select name="entry.1530645489" required>
+        <option value="">Select</option>
+        <option>Solar</option>
+        <option>Wind</option>
+        <option>Hydropower</option>
+        <option>Bioenergy</option>
+        <option>All</option>
+      </select>
 
-<p>Selected value: <span id="scaleValue">5</span></p>
+      <label>
+        On a scale from 1 (strong biodiversity protection priority)
+        to 10 (strong renewable energy expansion priority):
+      </label>
 
-<label>Please describe your perspective</label>
-<textarea name="entry.60280043"
-          rows="6"
-          required></textarea>
+      <input type="range"
+             min="1"
+             max="10"
+             value="5"
+             name="entry.128975814"
+             oninput="document.getElementById('scaleValue').innerText=this.value">
 
-<button type="submit">Submit Response</button>
+      <p>Selected value: <strong><span id="scaleValue">5</span></strong></p>
 
-</form>
+      <label>Please describe your perspective</label>
+      <textarea name="entry.60280043" rows="6" required></textarea>
+
+      <button type="submit" class="button">Submit Response</button>
+
+    </form>
+  </section>
 
 </main>
 
 <footer>
-  <p>Funded by Biodiversa+ under the EU Horizon framework. Coordinated by Lund University.</p>
+  <p>
+    Funded by Biodiversa+ under 2024–25 BiodivTransform joint Call.
+    Co-Funded by the EC (GA No. 101052342).
+    Coordinated by MGEO, Lund University.
+  </p>
 </footer>
 
 </body>
 </html>
-
-
