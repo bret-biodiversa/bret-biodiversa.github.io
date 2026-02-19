@@ -287,6 +287,15 @@ footer p {
   border-color: #1f3a5f;
 }
 
+/* ================= DASHBOARD CARD ================= */
+
+.dashboard-card {
+  margin-top: 40px;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
 
 /* ================= RESPONSIVE DESIGN ================= */
 
@@ -335,6 +344,7 @@ footer p {
   }
 
 }
+
 
 
 
