@@ -220,6 +220,44 @@ footer p {
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+/* ================= WORK PACKAGE GRID ================= */
+
+.wp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.wp-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  border: 1px solid #f0f0f0;
+  transition: all 0.25s ease;
+}
+
+.wp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.08);
+}
+
+.wp-card h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+  color: #1f3a5f;
+}
+
+/* Work package diagram styling */
+.wp-diagram {
+  width: 100%;
+  max-width: 950px;
+  display: block;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
 /* ================= RESPONSIVE DESIGN ================= */
 
@@ -268,5 +306,6 @@ footer p {
   }
 
 }
+
 
 
