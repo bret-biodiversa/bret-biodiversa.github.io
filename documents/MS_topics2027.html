@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master's Thesis Topics 2027</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-light: #eff6ff;
+            --text-dark: #1f2937;
+            --text-muted: #4b5563;
+            --bg-light: #f9fafb;
+            --border-color: #e5e7eb;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 3.5rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        header p {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        nav {
+            background-color: white;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+            padding: 0.25rem 0.5rem;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Overview Grid */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .overview-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: var(--card-shadow);
+            border-top: 4px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .overview-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+            color: var(--primary);
+        }
+
+        .overview-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .card-btn:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Project Sections */
+        .project-section {
+            background-color: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: var(--card-shadow);
+            scroll-margin-top: 5rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .project-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .project-section p {
+            color: var(--text-dark);
+            margin-bottom: 1.25rem;
+        }
+
+        .project-section ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .project-section li {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        /* Meta Sidebar / Info Box */
+        .meta-box {
+            background-color: var(--bg-light);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .meta-item {
+            font-size: 0.9rem;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: var(--text-muted);
+            display: block;
+            margin-bottom: 0.15rem;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-value {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border-color);
+            background-color: white;
+            margin-top: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2rem; }
+            .project-section { padding: 1.5rem; }
+            nav ul { gap: 0.75rem; }
+            nav a { font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Master's Thesis Offerings</h1>
+        <p>Explore cutting-edge research opportunities in remote sensing, GIS, and environmental-impact assessment for 2027.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#topic1">1. Wind-Energy Footprint</a></li>
+            <li><a href="#topic2">2. Solar PV Landscape Changes</a></li>
+            <li><a href="#topic3">3. Hydropower Cultural Landscapes</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <!-- Summary Cards for Quick Scanning -->
+        <div class="overview-grid">
+            <div class="overview-card">
+                <div>
+                    <h3>1. Wind-Energy Expansion</h3>
+                    <p>Map the spatial/temporal expansion of wind turbines and analyze resulting ecological fragmentation and habitat degradation.</p>
+                </div>
+                <a href="#topic1" class="card-btn">View Details</a>
+            </div>
+            <div class="overview-card">
+                <div>
+                    <h3>2. Solar PV Expansion</h3>
+                    <p>Reconstruct utility-scale solar farm developments using satellite imagery to track land-cover conversion and vegetation changes.</p>
+                </div>
+                <a href="#topic2" class="card-btn">View Details</a>
+            </div>
+            <div class="overview-card">
+                <div>
+                    <h3>3. Hydropower Landscapes</h3>
+                    <p>Reconstruct a century of submerged cultural history and Sámi land-use fragmentation caused by hydropower reservoirs.</p>
+                </div>
+                <a href="#topic3" class="card-btn">View Details</a>
+            </div>
+        </div>
+
+        <!-- Topic 1 Details -->
+        <section id="topic1" class="project-section">
+            <span class="project-tag">Topic 1</span>
+            <h2>Mapping the ecological footprint of wind-energy expansion</h2>
+            <p>Renewable energy is central to reducing greenhouse-gas emissions and achieving climate-neutrality targets. However, wind-energy development also creates local and regional pressures on ecosystems. Beyond the land directly occupied by turbines, associated infrastructure—including access roads, construction areas and transmission facilities—may cause vegetation loss, deforestation, habitat degradation and landscape fragmentation. Understanding these ecological footprints is essential for planning wind-energy expansion while minimizing risks to biodiversity.</p>
+            <p>This thesis will investigate the spatial and temporal expansion of wind-energy infrastructure between 2017 and 2026 in a selected study region. The student will use an algorithm developed by the Microsoft AI Team together with Sentinel-2 satellite imagery and other geospatial datasets to identify wind turbines, estimate their construction years, and map associated access-road development.</p>
+            <p>The student will then quantify the ecological footprint of this expansion by assessing land-cover conversion, vegetation loss and habitat fragmentation around newly constructed turbines and roads. Depending on the student's interests and data availability, the project may also examine whether wind-energy infrastructure overlaps with forests, protected areas, important habitats or other biodiversity-sensitive landscapes.</p>
