@@ -1487,6 +1487,14 @@ THIS SOFTWARE.
 <p>The left and right limbs are the portions of the full VI curve before and after its annual peak within DOY 1–365. Baseline = (left-limb minimum + right-limb minimum) / 2. Amplitude = peak VI − baseline. Each threshold level is baseline + its selected percentage × amplitude. SOS is the rising crossing before the peak; EOS is the falling crossing after it. No detrending is used in these definitions. A crossing is left unavailable if its target is not reached on the corresponding limb. There is no line connecting the two threshold levels. D is the separation between the two limb locations, not the full width at half maximum.</p>
 <p>The lower plot uses analytic derivatives. Filled circles identify local maxima of the selected derivative; hollow circles identify local minima. These geometric features are not independently validated biological events. Exact geometric curvature depends on the numerical units on both axes. Time is day of year, from 1 to 365. Both plots show a shared hover date and paired VI/derivative values.</p>
 <p>The starting settings follow Hongxiao Jin’s MATLAB example, with five-day timing parameters converted to days: b and D multiplied by 5, k and d divided by 5. The model offset c and limb scale A are parameters, distinct from the baseline and amplitude computed from the displayed curve. This is a conceptual model, not an operational phenology retrieval. All calculations run locally in your browser.</p>
+<p>
+<h2>Reference</h2>
+<a class="resource-link"
+href="https://arxiv.org/abs/2610.24879"
+target="_blank">
+Jin, H. (2026). "Logistic vegetation trajectories and their implications for land surface phenology." ArXiv stat.AP. 
+</a>
+</p>
 </details>
 </main>
 <footer class="text-small">BRET · Phenology methods explorer · No external scripts or data connections</footer>
