@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Sentinel-2 PPI, NDVI, EVI2, and DVI time series using an interactive Google Earth Engine application.">
+  <title>Sentinel-2 PPI Explorer – BRET Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    .explorer-intro { max-width: 1050px; margin: 20px auto 14px; padding: 0 18px; }
+    .explorer-intro p { line-height: 1.5; }
+    .explorer-actions { display: flex; gap: 14px; flex-wrap: wrap; margin: 12px 0; }
+    .explorer-actions a { font-weight: 600; }
+    .explorer-frame { display:block; width: 100%; height: max(700px, calc(100vh - 160px)); min-height: 700px; border: 1px solid #ddd; background: #f8faf9; }
+    .explorer-shell { margin: 0 16px 24px; }
+    .explorer-note { font-size: .9rem; color: #555; }
+    @media (max-width: 700px) { .explorer-frame { min-height: 680px; } }
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-row">
+    <img src="images/BRET_Logo.png" alt="BRET Logo" class="logo">
+    <div class="header-right">
+      <img src="images/EC.jpg" alt="European Commission Logo" class="funder-logo">
+      <img src="images/Biodiversa+Logo_FINAL_RGB.png" alt="Biodiversa+ Logo" class="funder-logo">
+    </div>
+  </div>
+  <h1 class="page-title">BRET Project</h1>
+</header>
+<nav class="site-nav">
+  <a href="index.html">Home</a>
+  <a href="workpackages.html">Work Packages</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="partners.html">Partners</a>
+  <a href="survey.html">Survey</a>
+  <a href="news.html" class="active">News &amp; Updates</a>
+  <a href="about.html">About</a>
+</nav>
+<main>
+  <section class="explorer-intro">
+    <h2>Sentinel-2 PPI Explorer</h2>
+    <p>Explore satellite vegetation time series by clicking on the map or entering geographic coordinates. Select a date range, buffer radius, and pixel screening method to compare the Plant Phenology Index (PPI), NDVI, EVI2, and DVI. Download the reflectance and index observations as CSV.</p>
+    <div class="explorer-actions">
+      <a href="https://s2project.projects.earthengine.app/view/s2-ppi-explorer" target="_blank" rel="noopener noreferrer">Open the full-screen Earth Engine App ↗</a>
+      <a href="news.html">Back to Tools &amp; Resources</a>
+    </div>
+    <p class="explorer-note">If the explorer below stays blank or is blocked by your browser, use the full-screen link above. The calculations are hosted by Google Earth Engine, not by GitHub Pages.</p>
+  </section>
+  <div class="explorer-shell">
+    <iframe class="explorer-frame" src="https://s2project.projects.earthengine.app/view/s2-ppi-explorer" title="Interactive Sentinel-2 PPI Explorer" loading="eager" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</main>
+<footer>
+  <p>Funded by Biodiversa+ under the 2024–25 BiodivTransform joint call. Co-funded by the European Commission (GA No. 101052342). Coordinated by MGEO, Lund University.</p>
+</footer>
+</body>
+</html>
